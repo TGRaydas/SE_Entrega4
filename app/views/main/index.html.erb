@@ -200,8 +200,12 @@
 		xhr.send()
 	}
 
-	window.onload = function(){
+	setInterval(function(){
 		display();
-		setTimeout(display, 60000);
-	}
+	}, 60000)
+
+	//window.onload = function(){
+	//	display();
+	//	setTimeout(display, 60000);
+	//}
 </script>
