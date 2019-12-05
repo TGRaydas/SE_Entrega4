@@ -1,0 +1,207 @@
+<body>
+	<div style="width: 50vmax; height: 40vmax; border: 2px solid #000000; border-radius: 15%; margin-left: 25vmax; margin-top: 2vmax;">
+		<div id="time" style="text-align: center; width: 100%; margin-top: 2vmax; font-size: 3vmax;"></div>
+		<div style="width: 100%; height: 5vmax; margin-top: 4vmax;">
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="on1()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center;">Led 1 ON</span> 
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="on2()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center;">Led 2 ON</span> 
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table" onclick="on3()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center;">Led 3 ON</span> 
+			</div>
+		</div>
+		<div style="width: 100%; height: 5vmax; margin-top: 2vmax;">
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="off1()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center;">Led 1 OFF</span> 
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="off2()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center;">Led 2 OFF</span>
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="off3()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center;">Led 3 OFF</span>
+			</div>
+		</div>
+		<div style="width: 100%; height: 5vmax; margin-top: 2vmax;">
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 40.5%; display: table;" onclick="alarm()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center;">Alarm</span>
+			</div>
+		</div>
+
+		<div style="width: 100%; height: 5vmax; margin-top: 2vmax;">
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="but1()">
+				<span id="button1" style="display: table-cell; vertical-align: middle; text-align: center;">Button 1</span> 
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="but2()">
+				<span id="button2" style="display: table-cell; vertical-align: middle; text-align: center;">Button 2</span>
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 9.9%; display: table;" onclick="but3()">
+				<span id="button3" style="display: table-cell; vertical-align: middle; text-align: center;">Button 3</span>
+			</div>
+		</div>
+		<div style="width: 100%; height: 5vmax; margin-top: 2vmax;">
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 10.2%; display: table;" onclick="sen1()">
+				<span id="sensor1" style="display: table-cell; vertical-align: middle; text-align: center;">Sensor 1</span> 
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 10.2%; display: table;" onclick="sen2()">
+				<span id="sensor2" style="display: table-cell; vertical-align: middle; text-align: center;">Sensor 2</span>
+			</div>
+			<div class="button" style="float: left; width: 20%; height: 100%; border: 2px solid #000000; border-radius: 1vmax; margin-left: 10.2%; display: table;" onclick="sen3()">
+				<span id="sensor3" style="display: table-cell; vertical-align: middle; text-align: center;">Sensor 3</span>
+			</div>
+		</div>
+
+		<!--div style="width: 100%; height: 7vmax; margin-top: 2vmax; display: table;">
+			<div style="float: left; width: 10%; height: 42%; border-radius: 1vmax; margin-left: 20.25%; display: table;">
+				<span style="display: table-cell; vertical-align: middle; text-align: center; font-size: 1vmax;">Display</span>
+			</div>
+			<input id="displayText" type="text" name="Display" style="margin-top: 0.6vmax; width: 35%; height: 1.5vmax; margin-left: 1vmax; float: left;">
+			<div style="float: left; width: 10%; border-radius: 1vmax; margin-left: 5%; margin-top: 0.7vmax; display: table; padding: 0.2vmax; border: 1px solid #000000;" onclick="display()">
+				<span style="display: table-cell; vertical-align: middle; text-align: center; font-size: 1vmax;">Send</span>
+			</div>
+		</div-->
+	</div>
+</body>
+
+<style type="text/css">
+	.button:hover{
+		cursor: pointer;
+		background-color: green;
+	}
+</style>
+
+
+<script>
+	function startTime() {
+	  var today = new Date();
+	  var h = today.getHours();
+	  var m = today.getMinutes();
+	  var s = today.getSeconds();
+	  m = checkTime(m);
+	  s = checkTime(s);
+	  document.getElementById('time').innerHTML =
+	  h + ":" + m + ":" + s;
+	  var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i) {
+	  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+	  return i;
+	}
+
+	function on1(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/on_led1');
+		xhr.send()
+	}
+	function on2(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/on_led2');
+		xhr.send()
+	}
+	function on3(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/on_led3');
+		xhr.send()
+	}
+
+	function off1(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/off_led1');
+		xhr.send()
+	}
+	function off2(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/off_led2');
+		xhr.send()
+	}
+	function off3(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/off_led3');
+		xhr.send()
+	}
+
+	function but1(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/b1', false);
+		xhr.send();
+
+		document.getElementById('button1').innerHTML = xhr.response;
+	}
+	function but2(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/b2', false);
+		xhr.send();
+
+		document.getElementById('button2').innerHTML = xhr.response;
+	}
+	function but3(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/b3', false);
+		xhr.send();
+
+		document.getElementById('button3').innerHTML = xhr.response;
+	}
+
+	function sen1(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/s1', false);
+		xhr.send();
+
+		document.getElementById('sensor1').innerHTML = xhr.response;
+	}
+	function sen2(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/s2', false);
+		xhr.send();
+
+		document.getElementById('sensor2').innerHTML = xhr.response;
+	}
+	function sen3(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/s3', false);
+		xhr.send();
+
+		console.log(xhr.response);
+
+		document.getElementById('sensor3').innerHTML = xhr.response;
+	}
+
+	function alarm(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', 'http://192.168.43.89/bocina');
+		xhr.send()
+	}
+
+	function display(){
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var time = h + ":" + m;
+
+		var xhr = new XMLHttpRequest();
+		//var url = 'http://192.168.1.102/display?p=' + document.getElementById('displayText').value;
+		var url = 'http://192.168.43.89/display?p=' + time;
+		xhr.onreadystatechange = function() {};
+		xhr.open('GET', url);
+		xhr.send()
+	}
+
+	window.onload = function(){
+		display();
+		setTimeout(display, 60000);
+	}
+</script>
